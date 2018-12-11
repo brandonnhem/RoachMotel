@@ -14,7 +14,7 @@ public class RoachMotel implements Subject{
     private static RoachMotel unique = new RoachMotel();
     private RoachMotel() {}
 
-    private final int capacity = 2;
+    private final int capacity = 5;
     private int currentCapacity = capacity;
     private String name;
     private ArrayList<Integer> vacantRooms = new ArrayList<>();
@@ -90,6 +90,7 @@ public class RoachMotel implements Subject{
         occupiedRooms.remove((Integer)mr.getroomNumber());
         currentCapacity++;
         System.out.println((mr.getRoachColony()).getName() + " has checked out of room " + mr.getroomNumber() + " after " + days + " days.");
+        System.out.println("Room Type and Amenities: " + mr.getDescription());
         vacancyChanged();
         return mr.getCost() * days;
     }

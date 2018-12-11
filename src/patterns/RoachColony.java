@@ -1,5 +1,17 @@
 package patterns;
 
+/**
+ * 
+ * @author Jamil Khan
+ * @author Brandon Nhem
+ * @author Anthony Pham
+ * @author Brandon Walker
+ * Purpose: 
+ * Input:
+ * Output:
+ *
+ */
+
 import java.util.*;
 
 public class RoachColony implements Observer {
@@ -26,6 +38,12 @@ public class RoachColony implements Observer {
         return name;
     }
 
+    /**
+     * The party method will at first increase the population of the RoachColony,
+     * but then it will decrease more if they have no shower, but not as much
+     * if they do have a shower.
+     * @param amenities - Amenities that the RoachColony has
+     */
     public void party(ArrayList<String> amenities) {
         System.out.print(getName() + " is throwing a party. ");
         currentPop = initPop + (initPop * growthRate);
@@ -39,17 +57,21 @@ public class RoachColony implements Observer {
             currentPop *= 0.5;
         }
     }
-
+    
     public int getInitPop() {
         return initPop;
     }
-
+    
+    /**
+     * Update method notifies the RoachColony with a print statement in the main tester class.
+     */
     public void update(String mname) {
         System.out.print("The " + name + " colony has received the notification from " + mname + ".\n");
     }
 
     public String toString() {
-        return name + " " + currentPop;
+    	String s = String.format("Name: %-10s || Population: %d || Growth Rate %.2f", name, (int) currentPop, growthRate);
+    	return s;
     }
 }
 

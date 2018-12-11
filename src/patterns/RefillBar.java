@@ -1,4 +1,13 @@
 package patterns;
+/**
+*
+* @author Jamil Khan, Brandon Nhem, Anthony Pham, Brandon Walker
+* December 12, 2018
+* Purpose: Returns the cost of refilling the bar
+* Input: n/a
+* Output: returns description() and getcost()
+*
+*/
 
 public class RefillBar extends AmenitiesDecorator{
     MotelRoom mr;
