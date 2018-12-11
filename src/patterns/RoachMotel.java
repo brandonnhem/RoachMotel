@@ -3,8 +3,11 @@ package patterns;
 import java.util.*;
 
 /**
- * Brandon Anthony Jamil Brandon December 10, 2018 Purpose: Singleton Design
- * Pattern implemented for the RoachMotel. Input: setCapacity(), setName(),
+ * @author Jamil Khan, Brandon Nhem, Anthony Pham, Brandon Walker
+ * December 12, 2018 
+ * Purpose: Singleton Design
+ * Pattern implemented for the RoachMotel. 
+ * Input: setCapacity(), setName(),
  * setVacancy() Output: getCapcity(), getName(), getVacancy(), toString()
  *
  */
@@ -110,8 +113,7 @@ public class RoachMotel implements Subject{
         for(int i = 0; i < observers.size(); i++) {
             Observer observer = (Observer) observers.get(i);
             observer.update(getInstance().getName());
-//            removeObserver(observer);
-            }
+        }
         observers.clear();
     }
     
