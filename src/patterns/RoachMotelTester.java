@@ -1,3 +1,12 @@
+//Group Members: Jamil Khan, Brandon Nhem, Brandon Walker, Anthony Pham
+//12/12/18
+//Tester for Project, creates Roach Motel and Roach Colonies, checks in colonies into
+//motel rooms with select amenities, adds colonies to waitlist if no vacancy, and gives
+//cost of stay after colony checks out, and notifies every colony on waitlist
+//Input: Roach colonies and amenities
+//Output: Whether colonies were able to check into a room, population after parties,
+//as well as cost of stay after checking out
+
 package patterns;
 
 import java.util.*;
